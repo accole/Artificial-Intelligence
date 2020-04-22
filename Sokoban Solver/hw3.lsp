@@ -1,5 +1,5 @@
 ;  Adam Cole
-;  UID: 004912373
+;  UID: #########
 ;  HW3
 ;
 ; CS161 Hw3: Sokoban
@@ -963,7 +963,7 @@
 ; time for this, I would use manhattan distance to find the shortest path
 ; between the sokoban and the nearest box, and sokoban and the nearest goal state.
 ;
-(defun h004912373 (s) 0 )
+(defun hUID (s) 0 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
