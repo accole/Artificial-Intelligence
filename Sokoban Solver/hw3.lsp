@@ -973,7 +973,8 @@
  | Problems are ordered roughly by their difficulties.
  | For most problems, we also provide a number which indicates the depth of the optimal solution.
  | These numbers are located at the comments of the problems. For example, the first problem below has optimal solution depth 6.
- | As for the solution depth, any admissible heuristic must make A* return an optimal solution. So, the depths of the optimal solutions provided could be used for checking whether your heuristic is admissible.
+ | As for the solution depth, any admissible heuristic must make A* return an optimal solution. So, the depths of the optimal
+ | solutions provided could be used for checking whether your heuristic is admissible.
  |
  | Warning: some problems toward the end are quite hard and could be impossible to solve without a good heuristic!
  | 
