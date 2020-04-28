@@ -1,5 +1,5 @@
 ; Adam Cole
-; UID: 004912373
+; UID: #########
 ; HW4
 
 ;;;;;;;;;;;;;;
@@ -8,6 +8,9 @@
 
 ;benchmark tests to run for extra testing:
 ;https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html
+
+;(sat? 3 '((1 -2 3) (-1) (-2 -3)))
+; > (-1 -2 3)
 
 ; EXERCISE: Modify this function to decide satisifiability of delta.
 ; If delta is satisfiable, sat? returns a list of n integers that represents a model of delta,  
