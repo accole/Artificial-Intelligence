@@ -1,0 +1,86 @@
+Adam Cole
+UID: 004912373
+HW6
+
+                           1
+
+[a]  {x/A, y/A, z/B}
+[b]  No Unification - A can't unify with B
+[c]  {x/B, y/A}
+[d]  {y/John, x/John}
+[e]  No Unification - y can't unify with Father(y)
+
+
+     		      	   2
+
+• John likes all kinds of food.
+• Apples are food.
+• Chicken is food.
+• Anything someone eats and isn’t killed by is food.
+• If you are killed by something, you are not alive.
+• Bill eats peanuts and is still alive. *
+• Sue eats everything Bill eats.  
+
+[a]  (Ax)     food(x) => likes(John, x).
+     	      food(Apples).
+     	      food(Chicken).
+     (Ax)(Ey) eats(y,x) ^ ~killed_by(y,x) => food(x).
+     (Ax)(Ey) killed_by(y,x) => ~alive(y).
+     	      eats(Bill,peanuts) ^ alive(Bill).
+     (Ax)     eats(Bill,x) => eats(Sue,x).
+
+[b]  (1)      ~food(x) v likes(John,x)
+     (2)      food(Apples)
+     (3)      food(Chicken)
+     (4)      ~eats(y,x) v killed_by(y,x) v food(x)
+     (5)      ~killed_by(y,x) v ~alive(y)
+     (6)      eats(Bill,peanuts) ^ alive(Bill)
+     (7)      ~eats(Bill,x) v eats(Sue,x)
+
+[c]  In Clause (1): set likes(John,peanuts) = F
+     With clause (5), alive(Bill) we resolve {y/Bill}
+     Therefore ~killed_by(Bill,x) in (5)
+     In (4), resolve {y/Bill, x/peanuts}
+     Then killed_by(Bill,peanuts) v food(peanuts)
+     
+     Using above statements, resolve food(peanuts) = T, and then
+     likes(John,peanuts) in Clause (1).
+     
+[d]  Clause (6) tells us eats(Bill,peanuts).
+     Clause (7) tells us ~eats(Bill,peanuts) v eats(Sue,peanuts) 
+     Therefore, eats(Sue,peanuts) = T.
+
+[e]  First conver the replacement sentences
+
+     • If you don’t eat, you die.
+     • If you die, you are not alive.
+     • Bill is alive. 
+
+     (8)    eats(x,y) v dies(x)
+     (9)    ~dies(x) v ~alive(x)
+     (10)   alive(Bill)
+
+     Using Clause (9) and (10), {x/Bill} and ~dies(Bill) = T
+     Using (8), eats(Bill,y) =  T.
+     Therefore, using (7) eats(Sue,y) = T.
+     
+     This is the most we can resolve the CNF Clauses since we do
+     not have clauses that tell us what Bill, and therfore Sue, eats.
+
+
+                      3
+
+[a]  No, 3-coloring graph1.txt is unsatisfiable.
+[b]  Yes, 4-coloring graph1.txt is satisfiable.
+[c]  Since 3-coloring is unsatisfiable and 4-coloring is satisfiable,
+     then 4 is the minimum number of colors needed to color each node
+     a single color, with no nodes sharing an edge having the same color.
+     A sample solution to this would be:
+       Node 1:	 Red
+       Node 2:	 Blue
+       Node 3:	 Green
+       Node 4:	 Blue
+       Node 5:	 Yellow
+       Node 6:	 Green
+       Node 7:	 Yellow
+[d]  8 Colors are required to properly color graph2.txt.
