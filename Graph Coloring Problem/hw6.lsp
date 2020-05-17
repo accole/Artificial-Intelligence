@@ -1,3 +1,7 @@
+;Adam Cole
+;UID: #########
+;HW6
+
 ;
 ; CS161 Spring 2020 HW6 Problem 3: Graph coloring to SAT conversion
 ;
