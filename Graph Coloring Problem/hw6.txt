@@ -1,5 +1,5 @@
 Adam Cole
-UID: 004912373
+UID: #########
 HW6
 
                            1
@@ -84,3 +84,5 @@ HW6
        Node 6:	 Green
        Node 7:	 Yellow
 [d]  8 Colors are required to properly color graph2.txt.
+
+
